@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Header.css";
 import { Button, Form, FormControl, Nav, Navbar } from "react-bootstrap";
 import logo from "../../images/logo.png";
 import { Link, useHistory } from "react-router-dom";
+import { UserContext } from "../../App";
 
 const Header = () => {
 	const history = useHistory();
 	const handleLoginRoute = () => {
 		history.push("/user");
 	};
+	const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+	// const [signOutUser, setSignOutUser] = useContext(UserContext);
+
 	return (
 		<Navbar bg="light" expand="md">
 			<div className="container-lg">
@@ -29,9 +33,21 @@ const Header = () => {
 						<Link to="/destination" className="nav-link mr-lg-5 mr-0">
 							Destination
 						</Link>
-						<Button className="btn btn-warning tg-primary" onClick={handleLoginRoute}>
-							Login
-						</Button>
+
+						{loggedInUser.isSignedIn ? (
+							<Button className="btn btn-warning tg-primary">Sign out</Button>
+						) : (
+							<Button className="btn btn-warning tg-primary" onClick={handleLoginRoute}>
+								Login
+							</Button>
+						)}
+
+						{loggedInUser.isSignedIn && (
+							<div className="user-icon">
+								{loggedInUser.name ? loggedInUser.name.split(" ").slice(0, 1) : "User"}{" "}
+								<i className="fas fa-user"></i>
+							</div>
+						)}
 					</Nav>
 				</Navbar.Collapse>
 			</div>

@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 
 const SignUpForm = (props) => {
-	const { toggleUser, validation, submit } = props;
-	const [validated, setValidated] = useState(false);
+	const { toggleUser, validation, submit, errors } = props;
+	console.log(errors);
 
 	return (
 		<div className="tg-form login signup">
@@ -18,11 +18,14 @@ const SignUpForm = (props) => {
 						name="name"
 						onBlur={validation}
 					/>
+					{errors.name.length > 0 && <p className="error-msg">{errors.name}</p>}
 				</div>
+
 				<div className="form-group">
 					<input type="email" className="form-control" placeholder="Email" name="email" onBlur={validation} />
-					<div className="valid-feedback">Email looks good!</div>
+					{errors.email.length > 0 && <p className="error-msg">{errors.email}</p>}
 				</div>
+
 				<div className="form-group">
 					<input
 						type="password"
@@ -31,7 +34,9 @@ const SignUpForm = (props) => {
 						name="password"
 						onBlur={validation}
 					/>
+					{errors.password.length > 0 && <p className="error-msg">{errors.password}</p>}
 				</div>
+
 				<div className="form-group">
 					<input
 						type="password"
@@ -40,6 +45,7 @@ const SignUpForm = (props) => {
 						name="confirmPassword"
 						onBlur={validation}
 					/>
+					{errors.confirmPassword.length > 0 && <p className="error-msg">{errors.confirmPassword}</p>}
 				</div>
 
 				<button type="submit" className="btn btn-warning tg-primary btn-block">
