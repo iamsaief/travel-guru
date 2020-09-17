@@ -104,3 +104,45 @@
 .tg-hero-images a:focus img {
 	box-shadow: 0px 20px 50px rgba(58, 57, 13, 0.5);
 }
+
+.tg-destination .section-top h3 {
+	font-family: "Montserrat", sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 29px;
+}
+
+.section-top h4 {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 20px;
+	color: #2b2b2b;
+}
+
+.hotel-card .info {
+}
+
+.hotel-card .info h4 {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 26px;
+	color: #000;
+	margin-bottom: 1em;
+}
+
+.hotel-card .info p:not(.ratings) {
+	font-size: 16px;
+	line-height: 20px;
+	color: #6a6a6a;
+	margin-bottom: 10px;
+}
+
+.hotel-card .info .ratings {
+	margin-bottom: 0;
+}
+
+.hotel-card .info .ratings > * {
+	margin-right: 24px;
+}

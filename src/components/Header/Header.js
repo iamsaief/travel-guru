@@ -14,7 +14,7 @@ const Header = () => {
 	// const [signOutUser, setSignOutUser] = useContext(UserContext);
 
 	return (
-		<Navbar bg="light" expand="md">
+		<Navbar bg="" expand="md">
 			<div className="container-lg">
 				<Link to="/" className="navbar-brand mr-md-5 mr-0">
 					<div className="logo">
