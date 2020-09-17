@@ -1,13 +1,17 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import Header from "../Header/Header";
+import fakeData from "../../fakeData";
+import TravelCard from "../TravelCard/TravelCard";
 import "./Home.css";
 
 const Home = () => {
 	const history = useHistory();
+	const travelCardData = fakeData.slice(0, 3);
+
 	const handleBookingRoute = () => {
-		history.push("/booking");
+		history.push(`/booking/${travelCardData[0].id}`);
 	};
+
 	return (
 		<main className="tg-hero d-flex align-items-center">
 			<div className="container">
@@ -28,36 +32,9 @@ const Home = () => {
 					<div className="col-md-7">
 						<div className="tg-hero-images">
 							<div className="row">
-								<div className="col-4">
-									<div className="th-hero-img">
-										<img
-											src={require("../../images/image/Sajek.png")}
-											style={{ maxWidth: "100%" }}
-											alt=""
-										/>
-										<h3>Cox's Bazar</h3>
-									</div>
-								</div>
-								<div className="col-4">
-									<div className="th-hero-img">
-										<img
-											src={require("../../images/image/Sreemongol.png")}
-											style={{ maxWidth: "100%" }}
-											alt=""
-										/>
-										<h3>Cox's Bazar</h3>
-									</div>
-								</div>
-								<div className="col-4">
-									<div className="th-hero-img">
-										<img
-											src={require("../../images/image/Sundorbon.png")}
-											style={{ maxWidth: "100%" }}
-											alt=""
-										/>
-										<h3>Cox's Bazar</h3>
-									</div>
-								</div>
+								{travelCardData.map((item) => (
+									<TravelCard travelCard={item} key={item.id}></TravelCard>
+								))}
 							</div>
 						</div>
 					</div>

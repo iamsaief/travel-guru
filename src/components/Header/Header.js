@@ -1,13 +1,13 @@
 import React from "react";
 import "./Header.css";
-import { Button, Form, FormControl, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Button, Form, FormControl, Nav, Navbar } from "react-bootstrap";
 import logo from "../../images/logo.png";
 import { Link, useHistory } from "react-router-dom";
 
 const Header = () => {
 	const history = useHistory();
 	const handleLoginRoute = () => {
-		history.push("/login");
+		history.push("/user");
 	};
 	return (
 		<Navbar bg="light" expand="md">
@@ -18,7 +18,7 @@ const Header = () => {
 					</div>
 				</Link>
 				<div className="tg-search">
-					<FormControl type="text" placeholder="Search" className="mr-sm-2" />
+					<FormControl type="search" placeholder="Search" className="mr-sm-2" />
 				</div>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
@@ -26,7 +26,7 @@ const Header = () => {
 						<Link to="/" className="nav-link mr-lg-5 mr-0">
 							Home
 						</Link>
-						<Link to="/" className="nav-link mr-lg-5 mr-0">
+						<Link to="/destination" className="nav-link mr-lg-5 mr-0">
 							Destination
 						</Link>
 						<Button className="btn btn-warning tg-primary" onClick={handleLoginRoute}>

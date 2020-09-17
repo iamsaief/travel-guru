@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import LoginWithOthers from "../LoginWithOthers/LoginWithOthers";
 
 const SignUp = () => {
 	return (
@@ -30,29 +31,6 @@ const SignUp = () => {
 					<div className="register-login">
 						Already have an account? <Link to="/login">Login</Link>
 					</div>
-				</div>
-
-				<div className="form-divider text-center">
-					<p>Or</p>
-				</div>
-
-				<div className="tg-thirdparty-login">
-					<button className="btn btn-secondary">
-						<span>
-							<img src={require("../../images/icon/fb.png")} style={{ maxWidth: "35px" }} alt="fb logo" />
-						</span>
-						<span>Continue with Facebook</span>
-					</button>
-					<button className="btn btn-secondary">
-						<span>
-							<img
-								src={require("../../images/icon/google.png")}
-								style={{ maxWidth: "32px" }}
-								alt="fb logo"
-							/>
-						</span>
-						<span>Continue with Google</span>
-					</button>
 				</div>
 			</div>
 		</section>

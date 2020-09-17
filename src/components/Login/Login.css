@@ -100,6 +100,18 @@
 	text-decoration: underline;
 }
 
+.tg-form .btn-logintoggle {
+	font-weight: normal;
+	color: var(--primary);
+	text-decoration: underline;
+	padding: 0;
+}
+
+.tg-form .btn-logintoggle:hover {
+	color: var(--primary);
+	text-decoration: underline;
+}
+
 .tg-form .register-login {
 	text-align: center;
 	margin-top: 20px;
@@ -112,4 +124,11 @@
 	font-size: 24px;
 	line-height: 29px;
 	margin-bottom: 30px;
+}
+
+.tg-signup-login .alert {
+	max-width: 570px;
+	margin-bottom: 30px;
+	display: inline-block;
+	text-align: center;
 }

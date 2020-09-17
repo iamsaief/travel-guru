@@ -1,12 +1,18 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
+import fakeData from "../../fakeData";
 import "../Home/Home.css";
 
 const Booking = () => {
 	const history = useHistory();
 	const handleLoginRoute = () => {
-		history.push("/login");
+		history.push("/destination");
 	};
+
+	const { id } = useParams();
+
+	const bookingData = fakeData.find((item) => item.id === id);
+	const { title, longDesc } = bookingData;
 
 	return (
 		<main className="tg-hero d-flex align-items-center">
@@ -14,12 +20,8 @@ const Booking = () => {
 				<div className="row align-items-center">
 					<div className="col-lg-6">
 						<div className="tg-hero-cta mb-md-0 mb-5">
-							<h1>Cox's bazar</h1>
-							<p>
-								Cox's Bazar is a city, fishing port, tourism centre and district headquarters in
-								southeastern Bangladesh. It is famous mostly for its long natural sandy beach, and it
-								...
-							</p>
+							<h1>{title}</h1>
+							<p>{longDesc}</p>
 						</div>
 					</div>
 					<div className="col-lg-6">

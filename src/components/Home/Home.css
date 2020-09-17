@@ -48,11 +48,11 @@
 	color: #fff;
 }
 
-.th-hero-img {
+.tg-hero-img {
 	position: relative;
 }
 
-.th-hero-img h3 {
+.tg-hero-img h3 {
 	font-size: 36px;
 	line-height: 43px;
 	color: #fff;
@@ -81,4 +81,26 @@
 .tg-booking-form .btn.tg-primary {
 	height: 60px;
 	margin-top: 30px;
+}
+
+.tg-hero-images a {
+	display: block;
+	transition: 0.2s;
+	border-radius: 14px;
+}
+
+.tg-hero-images img {
+	box-shadow: 0px 20px 50px rgb(0 0 0 / 50%);
+	border-radius: 10px;
+	transition: 0.2s;
+}
+
+.tg-hero-images a:hover,
+.tg-hero-images a:focus {
+	box-shadow: 0 0 0 4px #fbbc04;
+}
+
+.tg-hero-images a:hover img,
+.tg-hero-images a:focus img {
+	box-shadow: 0px 20px 50px rgba(58, 57, 13, 0.5);
 }
