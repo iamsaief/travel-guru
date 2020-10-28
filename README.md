@@ -2,13 +2,13 @@
 
 [<img src="./.github/tg-thumbnail.jpg" alt="" width="100%">](https://ims-travel-guru.web.app)
 
-#### Features -
+### Features -
 
 -   User can select destination and make booking
 -   Google map will mark the selected destination
 -   Available hotels will be shown for that destination and so on.
 
-#### Technologies -
+### Technologies -
 
 -   ReactJS
 -   Bootstrap
